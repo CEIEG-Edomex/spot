@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Sitio oficial del Comité Estatal de Información Estadística y Geográfica del Estado de México">
+    <title>CEIEG | Estado de México</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <script>
+        AOS.init();
+    </script>
+    <header class="hero">
+
+        <div class="hero-content reveal">
+            <h1>CEIEG</h1>
+            <div class="hero-line"></div>
+            <h3>Comité Estatal de Información Estadística y Geográfica del Estado de México</h3>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <section id="que-es" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="text-content reveal">
+                    <h2>¿Qué es el CEIEG?</h2>
+                    <p>El Comité Estatal de Información Estadística y Geográfica (CEIEG) se constituye como una
+                        instancia colegiada de participación y consulta.</p>
+                    <p>En este espacio confluyen los representantes de las áreas administrativas con actividades
+                        estadísticas y geográficas del <strong>Estado de México</strong>, sus municipios y el
+                        <strong>INEGI</strong>.
+                    </p>
+                    <p>Su objetivo es la ejecución y cumplimiento de los principios, bases y normas establecidas en el
+                        Sistema Nacional de Información Estadística y Geografía (SNIEG) y el Sistema Estatal de
+                        Información e Investigación Geográfica, Estadística y Catastral del Estado de México (SE).</p>
+                </div>
+                <div class="icon-placeholder reveal">
+                    <h3 class="title-icon">El CEIEG del Estado de México está integrado por:</h3>
+                    <div class="grid-container">
+                        <div class="grid-item clickable-item" data-aos="fade-right" data-aos-offset="200" data-aos-duration="800" data-categoria="secretarias">
+                            <img src="img/UE/SE.png" alt="Secretarias Estatales">
+                            <span class="item-text">Secretarías Estatales</span>
+                        </div>
+                        <div class="grid-item clickable-item" data-aos="fade-left" data-aos-offset="200" data-aos-duration="800" data-categoria="orgautonomos">
+                            <img src="img/UE/ORGA.png" alt="Organismos Autonomos">
+                            <span class="item-text">Órganos Autónomos </span>
+                        </div>
+                        <div class="grid-item clickable-item" data-aos="fade-right" data-aos-offset="200" data-aos-duration="800" data-categoria="orgpublicosdescen">
+                            <img src="img/UE/ORGD.png" alt="Organismos públicos descentralizados">
+                            <span class="item-text">Organismos públicos descentralizados</span>
+                        </div>
+                        <div class="grid-item clickable-item" data-aos="fade-left" data-aos-offset="200" data-aos-duration="800" data-categoria="orgpublicosdescon">
+                            <img src="img/UE/ORGP.png" alt="Organismos públicos desconcentrados">
+                            <span class="item-text">Organismos públicos desconcentrados</span>
+                        </div>
+                        <div class="grid-item clickable-item" data-aos="fade-right" data-aos-offset="200" data-aos-duration="800" data-categoria="orgadmcentral">
+                            <img src="img/UE/ORGDSC.png" alt="">
+                            <span class="item-text font-size13">Organismos de la Administración Pública Centralizada del Estado de México</span>
+                        </div>
+                        <!-- AGREGAR ORGANISMO DESCONCENTRADOS -- COESPO -->
+                         <!-- QUITAR SIGLAS DE TODOS -->
+                        <!-- <div class="grid-item clickable-item" data-aos="fade-left" data-aos-offset="200" data-aos-duration="800">
+                            <img src="img/UE/UADM.png" alt="">
+                            <span class="item-text">Unidades administrativas</span>
+                        </div>
+                        <div class="grid-item clickable-item" data-aos="fade-right" data-aos-offset="200" data-aos-duration="800">
+                            <img src="img/UE/EDOMEX_MAP.png" alt="">
+                            <span class="item-text">Representantes de los Ayuntamientos</span>
+                        </div> -->
+                        <div class="grid-item clickable-item" data-aos="fade-left" data-aos-offset="200" data-aos-duration="800" data-categoria="invitados">
+                            <img src="img/UE/INV.png" alt="">
+                            <span class="item-text">Invitados</span>
+                        </div>
+                        <div class="grid-item clickable-item" data-aos="fade-right" data-aos-offset="200" data-aos-duration="800">
+                            <img src="img/UE/INEGI_Logotipo_1.png" alt="">
+                            <span class="item-text">Instituto Nacional de Estadística y Geografía</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="icon-placeholder reveal">
+                    <img src="img/SNIEG_2017vertical.png" alt="Logo SNIEG" style="max-width: 80%; height: auto;">
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <section id="historia" class="history">
+        <div class="container">
+            <h2 class="reveal" style="text-align: center;">Cronología Institucional</h2>
+            <div class="timeline">
+
+                <div class="timeline-item reveal">
+                    <span class="timeline-date">15 de Febrero de 2012</span>
+                    <p>En el marco de la Ley del Sistema Nacional de Información Estadística y Geográfica, el “ESTADO” y
+                        el “INEGI” suscribieron un Convenio para formalizar la constitución y operación del Comité
+                        Técnico Especializado denominado: Comité Estatal de Información Estadística y Geográfica, del
+                        Estado de México.</p>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <span class="timeline-date">15 de Noviembre de 2019</span>
+                    <p>El “ESTADO” y el “INEGI”, suscribieron un Acta de Conformidad para la Continuidad del Convenio
+                        para la Constitución y Operación del Comité Estatal de Información Estadística y Geográfica en
+                        el Estado de México.</p>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <span class="timeline-date">30 de Enero 2026</span>
+                    <p>El “ESTADO” y el “INEGI”, suscribieron un Convenio de Coordinación para la continuidad de la 
+                        Operación del Comité Estatal de Información Estadística y Geográfica en el Estado de México.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="integrantes" class="team">
+        <div class="container">
+            <h2 class="reveal">Integrantes y Funciones</h2>
+            <p class="reveal">Estructura operativa del Comité para el cumplimiento de sus objetivos.</p>
+
+            <div class="team-grid">
+
+                <div class="card-container reveal">
+                    <div class="card-inner">
+                        <article class="card-front">
+                            <div class="card-header"></div>
+                            <h4>Presidencia del Comité</h4>
+                            <p>a cargo de la persona titular de la <b>Secretaría de Finanzas</b> del Estado de México, 
+                                o quien cuente con funciones afines;</p>
+                            <button class="flip-btn">Ver funciones</button>
+                        </article>
+                        <article class="card-back">
+                            <h4>Funciones Principales</h4>
+                            <ul>
+                                <!-- Funciones sintetizadas -->
+                                <li>Conducir y coordinar las sesiones del CEIEG.</li>
+                                <li>Integrar y canalizar las opiniones del Comité sobre normatividad, Información de Interés Nacional, Indicadores Clave y Proyectos Estratégicos.</li>
+                                <li>Promover el cumplimiento de la normativa del SNIEG.</li>
+                                <li>Dar seguimiento a acuerdos y programa de trabajo.</li>
+                                <li>Coordinar la elaboración y actualización del programa de trabajo.</li>
+                                <li>Verificar la vigencia de las designaciones de integrantes del Comité.</li>
+                            </ul>
+                            <button class="flip-btn back-btn">Regresar</button>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="card-container reveal">
+                    <div class="card-inner">
+                        <article class="card-front">
+                            <div class="card-header"></div>
+                            <h4>Secretaría Técnica:</h4>
+                            <p>a cargo de la persona titular de la Coordinación Estatal México Poniente en el <b>INEGI</b> o funciones afines;</p>
+                            <button class="flip-btn">Ver funciones</button>
+                        </article>
+                        <article class="card-back">
+                            <h4>Funciones Principales</h4>
+                            <ul>
+                                <!-- Funciones sintetizadas -->
+                                <li>Participar con voz y voto en las sesiones del CEIEG.</li>
+                                <li>Apoyar técnica y operativamente a la Presidencia del Comité.</li>
+                                <li>Impulsar la capacitación y aplicación de la normativa del SNIEG.</li>
+                                <li>Participar en el análisis e integración de las opiniones sobre la Información de Interés Nacional, Indicadores Clave y Proyectos Estratégicos.</li>
+                                <li>Resguardar la documentación del CEIEG.</li>
+                                <li>Apoyar a la Secretaría de Actas.</li>
+                            </ul>
+                            <button class="flip-btn back-btn">Regresar</button>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="card-container reveal">
+                    <div class="card-inner">
+                        <article class="card-front">
+                            <div class="card-header"></div>
+                            <h4>Secretaría de actas:</h4>
+                            <p>a cargo de la persona titula del Instituto de Información e Investigación Geográfica, Estadística y Catastral del Estado de México (IGECEM) o funciones afines; </p>
+                            <button class="flip-btn">Ver funciones</button>
+                        </article>
+                        <article class="card-back">
+                            <h4>Funciones Principales</h4>
+                            <ul>
+                                <!-- Funciones sintetizadas -->
+                                <li>Asistir a las sesiones del CEIEG con voz.</li>
+                                <li>Proponer el orden del día a la Presidencia.</li>
+                                <li>Integrar la carpeta y documentación de las sesiones.</li>
+                                <li>Apoyar en la emisión de convocatorias.</li>
+                                <li>Elaborar minutas y resguardar la documentación del Comité.</li>
+                            </ul>
+                            <button class="flip-btn back-btn">Regresar</button>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="card-container reveal">
+                    <div class="card-inner">
+                        <article class="card-front">
+                            <div class="card-header"></div>
+                            <h4>Vocalías:</h4>
+                            <p>a cargo de las personas titulares de las <b>Secretarías Estatales</b> o funciones afines</p>
+                            <button class="flip-btn">Ver funciones</button>
+                        </article>
+                        <article class="card-back">
+                            <h4>Funciones Principales</h4>
+                            <ul>
+                                <!-- Funciones sintetizadas -->
+                                <li>Participar con voz y voto en las sesiones del CEIEG.</li>
+                                <li>Dar seguimiento al cumplimiento de compromisos institucionales.</li>
+                                <li>Contribuir en propuestas de información, indicadores y proyectos estratégicos.</li>
+                                <li>Impulsar la normalización y comparabilidad de la información estadística y geográfica para la planeación.</li>
+                            </ul>
+                            <button class="flip-btn back-btn">Regresar</button>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="riocte">
+            <a href="https://www.snieg.mx/Documentos/Normatividad/Vigente/RIOCTE_2025.pdf" class="link-riocte">Conoce a detalle las funciones de los integrantes</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logos">
+                <img src="img/INEGI_Logotipo_8.png" class="f-logo">
+                <img src="img/IGECEM-LOGO.png" class="f-logo">
+                <img src="img/LOGO_EDOMEX.png" class="f-logo">
+                <img src="img/SNIEG_2017vertical.png" class="f-logo">
+                <!-- <img src="img/INEGI_Logotipo_8.png" class="f-logo">
+                <img src="img/IGECEM-LOGO.png" class="f-logo">
+                <img src="img/LOGO_EDOMEX1.png" class="f-logo">
+                <img src="img/LOGO_EDOMEX2.png" class="f-logo">
+                <img src="img/SNIEG_2017vertical.png" class="f-logo"> -->
+            </div>
+            <p><strong>Comité Estatal de Información Estadística y Geográfica del Estado de México</strong></p>
+            <div class="legal">
+                &copy; 2026 | Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

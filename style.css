@@ -1,0 +1,637 @@
+ /* =========================================
+           VARIABLES Y RESET (Institutional Palette)
+           ========================================= */
+ :root {
+     /* Colores Institucionales */
+     --edomex-blue-dark: #003366;
+     /* Azul primario profundo */
+     --edomex-blue-light: #00548F;
+     /* Azul secundario brillante */
+     --edomex-grey-dark: #54565A;
+     /* Gris texto */
+     --edomex-grey-light: #DDDDDD;
+     /* Gris bordes/fondos */
+     --white: #FFFFFF;
+
+     /* Espaciado y Tipografía */
+     --font-main: 'Montserrat', sans-serif;
+     --container-width: 1100px;
+     --section-padding: 80px 20px;
+ }
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ html {
+     scroll-behavior: smooth;
+ }
+
+ body {
+     font-family: var(--font-main);
+     color: var(--edomex-grey-dark);
+     background-color: var(--white);
+     line-height: 1.6;
+     overflow-x: hidden;
+     /* Evita scroll horizontal accidental */
+ }
+
+ /* =========================================
+           UTILIDADES Y ANIMACIONES
+           ========================================= */
+ .container {
+     max-width: var(--container-width);
+     margin: 0 auto;
+     width: 100%;
+ }
+
+ h2 {
+     font-size: 2.2rem;
+     color: var(--edomex-blue-dark);
+     margin-bottom: 1.5rem;
+     font-weight: 700;
+     text-transform: uppercase;
+     letter-spacing: -1px;
+ }
+
+
+ p {
+     font-size: 1.1rem;
+     margin-bottom: 1rem;
+     font-weight: 400;
+ }
+
+ /* Clases para IntersectionObserver */
+ .reveal {
+     opacity: 0;
+     transform: translateY(40px);
+     transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+     /* Easing suave */
+ }
+
+ .reveal.active {
+     opacity: 1;
+     transform: translateY(0);
+ }
+
+ /* IMAGENES */
+
+ .footer-logos {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+     justify-items: center;
+     gap: 30px;
+     margin-bottom: 20px;
+ }
+
+ .f-logo {
+     height: 35px;
+ }
+
+ .logo-inegi{
+     filter: brightness(0) invert(1);
+ }
+
+ /* =========================================
+           SECCIÓN 1: HERO / PORTADA
+           ========================================= */
+ .hero {
+     height: 90vh;
+     /* Casi pantalla completa */
+     background-color: var(--edomex-blue-dark);
+     color: var(--white);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     position: relative;
+     /* Patrón sutil geométrico usando CSS puro */
+     background-image: repeating-linear-gradient(45deg,
+             rgba(255, 255, 255, 0.03) 0px,
+             rgba(255, 255, 255, 0.03) 2px,
+             transparent 2px,
+             transparent 10px);
+ }
+
+ .hero-content h1 {
+     font-size: 5rem;
+     font-weight: 700;
+     margin-bottom: 1rem;
+     letter-spacing: 2px;
+ }
+
+ .hero-content h3 {
+     font-size: 1.5rem;
+     font-weight: 300;
+     max-width: 800px;
+     margin: 0 auto;
+     opacity: 0.9;
+ }
+
+ /* Elemento decorativo CSS (Línea) */
+ .hero-line {
+     width: 100px;
+     height: 4px;
+     background-color: var(--edomex-blue-light);
+     margin: 2rem auto;
+ }
+
+ /* Indicador de Scroll */
+ .scroll-indicator {
+     position: absolute;
+     bottom: 30px;
+     left: 50%;
+     transform: translateX(-50%);
+     animation: bounce 2s infinite;
+ }
+
+ .scroll-indicator span {
+     display: block;
+     width: 20px;
+     height: 20px;
+     border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+     border-right: 2px solid rgba(255, 255, 255, 0.5);
+     transform: rotate(45deg);
+ }
+
+ @keyframes bounce {
+
+     0%,
+     20%,
+     50%,
+     80%,
+     100% {
+         transform: translateX(-50%) translateY(0);
+     }
+
+     40% {
+         transform: translateX(-50%) translateY(-10px);
+     }
+
+     60% {
+         transform: translateX(-50%) translateY(-5px);
+     }
+ }
+
+ /* =========================================
+           SECCIÓN 2: ¿QUÉ ES?
+           ========================================= */
+ .about {
+     padding: var(--section-padding);
+     overflow: hidden; /*  Debido a la animación AOS para evitar desbordamiento   */
+ }
+
+ .about-grid {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap: 4rem;
+     align-items: center;
+ }
+ .text-content p {
+    text-align: justify;
+ }
+
+
+ .icon-placeholder {
+     width: 100%;
+     height: auto;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     border-radius: 4px;
+     /* Pequeño radio para suavizar */
+     position: relative;
+ }
+
+ /* contenedor de UE participantes */
+ 
+ .title-icon{
+   font-size: 1rem;
+     color: var(--edomex-blue-dark);
+     text-transform: uppercase;
+     letter-spacing: -1px;
+     text-align: center;
+ }
+
+ .item-text {
+    display: none; /* Oculto en Desktop */
+}
+ 
+ .grid-container {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+     gap: 20px;
+     padding: 60px 20px 20px 20px;
+     margin: 0 auto;
+ }
+
+ .grid-item {
+     /* Diseño Plano (Flat) Institucional */
+     border: 1px solid #DDDDDD;
+     border-radius: 10px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 5px;
+     /* Aspect ratio cuadrado para que todas las cajas sean uniformes */
+     aspect-ratio: 1 / 1;
+ }
+
+ .grid-item img {
+     max-width: 100%;
+     height: auto;
+     /* Evita que la imagen se estire feo */
+     object-fit: contain;
+ }
+
+ /* Título Institucional */
+.swal-institucional-title {
+    color: #003366 !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 1.8rem !important;
+    border-bottom: 3px solid #00548F;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Contenedor de la lista */
+.swal-unidades-container {
+    margin-top: 30px;
+}
+
+.swal-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas simétricas */
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.swal-list li {
+    background: #f4f7f9;
+    padding: 12px 15px;
+    border-left: 4px solid #003366;
+    font-size: 0.85rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    transition: background 0.3s ease;
+}
+
+.swal-list li:hover {
+    background: #e9eff3;
+}
+
+/* Botón Plano */
+.swal-btn-institucional {
+    border-radius: 0 !important;
+    padding: 12px 35px !important;
+    font-weight: 600 !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .swal-list {
+        grid-template-columns: 1fr; /* Una columna en celulares */
+    }
+    .swal-institucional-title {
+        font-size: 1.4rem !important;
+    }
+}
+
+.clickable-item {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 1px solid var(--edomex-grey-light);
+    background: #fff;
+}
+
+/* Efecto al pasar el mouse */
+.clickable-item:hover {
+    border-color: var(--edomex-blue-light);
+    background-color: #f0f7ff; /* Un azul muy sutil */
+    transform: translateY(-3px);
+}
+
+.item-label {
+    margin-top: 15px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--edomex-blue-dark);
+    text-align: center;
+    pointer-events: none; /* Evita que el texto interfiera con el clic */
+}
+
+ /* =========================================
+           SECCIÓN 3: CRONOLOGÍA (HISTORIA)
+           ========================================= */
+ .history {
+     padding: var(--section-padding);
+     background-color: #F9F9F9;
+     /* Fondo muy suave para diferenciar */
+ }
+
+ .timeline {
+     position: relative;
+     max-width: 800px;
+     margin: 0 auto;
+ }
+
+ /* Línea vertical central */
+ .timeline::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     left: 20px;
+     /* Alineado a la izquierda en móvil, ajustable en desktop */
+     width: 4px;
+     background: var(--edomex-grey-light);
+ }
+
+ .timeline-item {
+     position: relative;
+     margin-bottom: 3rem;
+     padding-left: 60px;
+     /* Espacio para la línea */
+ }
+
+ /* Puntos en la línea de tiempo */
+ .timeline-item::after {
+     content: '';
+     position: absolute;
+     left: 14px;
+     /* Ajuste para centrar sobre la línea de 4px */
+     top: 5px;
+     width: 16px;
+     height: 16px;
+     background-color: var(--edomex-blue-dark);
+     border-radius: 50%;
+     border: 4px solid #F9F9F9;
+     z-index: 2;
+ }
+
+ .timeline-date {
+     font-weight: 700;
+     color: var(--edomex-blue-light);
+     margin-bottom: 0.5rem;
+     display: block;
+     text-transform: uppercase;
+     letter-spacing: 1px;
+ }
+
+ /* =========================================
+           SECCIÓN 4: INTEGRANTES (GRID)
+           ========================================= */
+ .team {
+     padding: var(--section-padding);
+     display: flex;
+     flex-direction: column;
+     gap: 2em;
+ }
+
+ .team-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 2rem;
+     margin-top: 3rem;
+     perspective: 1000px; /* Necesario para el efecto 3D */
+ }
+
+ .card-container {
+   background: transparent;
+    min-height: 200px; /* Un mínimo para que no se vea vacío */
+    perspective: 1000px;
+}
+
+.card-inner {
+   position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+    
+    /* TRUCO SENIOR: Grid para que el padre mida lo que mida la cara más alta */
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/* Esta clase se activará con JS */
+.card-inner.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    grid-area: 1 / 1 / 2 / 2;
+    
+    backface-visibility: hidden;
+    border: 1px solid var(--edomex-grey-light);
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: var(--white);
+    
+    /* Importante: evitar que el contenido se desborde */
+    height: fit-content;
+    min-height: 100%;   
+    gap: 1.5em;
+}
+
+.card-back {
+    transform: rotateY(180deg); /* La cara trasera inicia invertida */
+    background-color: #f8f9fa;
+    border-color: var(--edomex-blue-light);
+}
+
+.card-back ul {
+    list-style: none;
+    padding: 0;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+.card-back li {
+    margin-bottom: 10px;
+    padding-left: 15px;
+    position: relative;
+}
+
+.card-back li::before {
+    content: "•";
+    color: var(--edomex-blue-light);
+    position: absolute;
+    left: 0;
+}
+
+/* Botón Estilo Institucional */
+.flip-btn {
+    background: transparent;
+    border: 2px solid var(--edomex-blue-light);
+    color: var(--edomex-blue-light);
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: var(--font-main);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+}
+
+.flip-btn:hover {
+    background: var(--edomex-blue-light);
+    color: var(--white);
+}
+
+.back-btn {
+    border-color: var(--edomex-grey-dark);
+    color: var(--edomex-grey-dark);
+}
+
+ .card {
+     background: var(--white);
+     border: 1px solid var(--edomex-grey-light);
+     /* Diseño plano, sin sombras */
+     padding: 2rem;
+     transition: transform 0.3s ease, border-color 0.3s ease;
+ }
+
+ .card:hover {
+     transform: translateY(-5px);
+     border-color: var(--edomex-blue-light);
+ }
+
+ .card-header {
+     height: 4px;
+     width: 50px;
+     background-color: var(--edomex-blue-dark);
+     margin-bottom: 1.5rem;
+ }
+
+ .card-front h4 {
+     font-size: 1.25rem;
+     color: var(--edomex-blue-dark);
+     margin-bottom: 1rem;
+ }
+
+ .card-front p {
+     font-size: 0.95rem;
+     color: var(--edomex-grey-dark);
+ }
+
+ /* =========================================
+           SECCIÓN 5: FOOTER
+           ========================================= */
+ footer {
+     background-color: var(--edomex-blue-dark);
+     color: var(--white);
+     text-align: center;
+     padding: 3rem 1rem;
+     font-size: 0.9rem;
+ }
+
+ footer p {
+     margin-bottom: 0.5rem;
+     opacity: 0.8;
+ }
+
+ footer .legal {
+     font-size: 0.8rem;
+     margin-top: 1rem;
+     opacity: 0.5;
+     border-top: 1px solid rgba(255, 255, 255, 0.1);
+     padding-top: 1rem;
+     display: inline-block;
+ }
+
+ /* =========================================
+           RESPONSIVE DESIGN (MEDIA QUERIES)
+           ========================================= */
+ @media (max-width: 768px) {
+     .hero-content h1 {
+         font-size: 4rem;
+     }
+
+     .hero-content h3 {
+         font-size: 1.4rem;
+         padding: 0 1rem;
+     }
+
+     .about-grid {
+         grid-template-columns: 1fr;
+         /* Una columna en móvil */
+     }
+
+
+     .timeline::before {
+         left: 10px;
+     }
+
+     .timeline-item {
+         padding-left: 40px;
+     }
+
+     .timeline-item::after {
+         left: 4px;
+     }
+
+     /* PARA IMG-UE */
+
+     .grid-container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: 100%;
+    }
+
+    .grid-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 100px;
+        gap: 15px;
+        padding: 10px;
+        border-bottom: 1px solid #eee; /* Separador opcional */
+    }
+
+    .item-text {
+        display: block; /* Mostramos el texto en móvil */
+        flex: 1;
+        font-weight: 600;
+        color: var(--edomex-blue-dark);
+        font-size: 0.9rem;
+    }
+
+    .font-size13{
+        font-size: 13px;
+    }
+
+    .grid-item img {
+        width: 60px; /* Tamaño controlado para móvil */
+        height: auto;
+    }
+
+    /* --- LÓGICA DE ALTERNANCIA --- */
+
+    /* Impares (1, 3, 5...): Texto a la DERECHA de la imagen */
+    .grid-item:nth-child(odd) {
+        flex-direction: row; 
+        text-align: center;
+    }
+
+    /* Pares (2, 4, 6...): Texto a la IZQUIERDA de la imagen */
+    .grid-item:nth-child(even) {
+        flex-direction: row-reverse; 
+        text-align: center;
+    }
+ }
