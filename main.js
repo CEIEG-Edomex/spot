@@ -68,7 +68,11 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         invitados: {
             titulo: "Invitados",
-            items: ["Organizaciones sociales o privadas", "Sector Académico", "Organismos internacionales", "Otras Unidades del Estado"]
+            items: ["Ayuntamientos", "Sector Académico", "Organizaciones sociales", "Instituciones privadas"]
+        },
+        inegi: {
+            titulo: "INEGI",
+            items: ["Coordinación Estatal México Poniente"]
         }
         // ... Agrega las demás categorías ...
     };
