@@ -79,20 +79,35 @@
  /* IMAGENES */
 
  .footer-logos {
+     background-color: #FFFFFF;
      display: grid;
      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
      justify-items: center;
      gap: 30px;
      margin-bottom: 20px;
+     margin-inline: -15px;
+     padding: 1em;
  }
+ /* --- DISEÑO RESPONSIVE (Móvil / Listado Vertical) --- */
+@media (max-width: 500px) {
+    .footer-logos {
+        /* Forzamos una sola columna para que parezca listado */
+        grid-template-columns: 1fr; 
+        gap: 25px;
+    }
+    .logo-snieg  { order: 1; } /* 1° SNIEG */
+    .logo-edomex { order: 2; } /* 2° GobEdomex */
+    .logo-igecem { order: 3; } /* 3° IGECEM */
+    .logo-inegi  { order: 4; } /* 4° INEGI */
+}
 
  .f-logo {
      height: 35px;
  }
 
- .logo-inegi{
+ /* .contraste { 
      filter: brightness(0) invert(1);
- }
+ } */
 
  /* =========================================
            SECCIÓN 1: HERO / PORTADA
@@ -180,7 +195,8 @@
            ========================================= */
  .about {
      padding: var(--section-padding);
-     overflow: hidden; /*  Debido a la animación AOS para evitar desbordamiento   */
+     overflow: hidden;
+     /*  Debido a la animación AOS para evitar desbordamiento   */
  }
 
  .about-grid {
@@ -189,8 +205,9 @@
      gap: 4rem;
      align-items: center;
  }
+
  .text-content p {
-    text-align: justify;
+     text-align: justify;
  }
 
 
@@ -207,9 +224,9 @@
  }
 
  /* contenedor de UE participantes */
- 
- .title-icon{
-   font-size: 1rem;
+
+ .title-icon {
+     font-size: 1rem;
      color: var(--edomex-blue-dark);
      text-transform: uppercase;
      letter-spacing: -1px;
@@ -217,9 +234,10 @@
  }
 
  .item-text {
-    display: none; /* Oculto en Desktop */
-}
- 
+     display: none;
+     /* Oculto en Desktop */
+ }
+
  .grid-container {
      display: grid;
      grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
@@ -248,89 +266,94 @@
  }
 
  /* Título Institucional */
-.swal-institucional-title {
-    color: #003366 !important;
-    font-family: 'Montserrat', sans-serif !important;
-    font-weight: 700 !important;
-    font-size: 1.8rem !important;
-    border-bottom: 3px solid #00548F;
-    display: inline-block;
-    padding-bottom: 10px;
-}
+ .swal-institucional-title {
+     color: #003366 !important;
+     font-family: 'Montserrat', sans-serif !important;
+     font-weight: 700 !important;
+     font-size: 1.8rem !important;
+     border-bottom: 3px solid #00548F;
+     display: inline-block;
+     padding-bottom: 10px;
+ }
 
-/* Contenedor de la lista */
-.swal-unidades-container {
-    margin-top: 30px;
-}
+ /* Contenedor de la lista */
+ .swal-unidades-container {
+     margin-top: 30px;
+ }
 
-.swal-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas simétricas */
-    gap: 12px;
-    list-style: none;
-    padding: 0;
-    text-align: left;
-}
+ .swal-list {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     /* Dos columnas simétricas */
+     gap: 12px;
+     list-style: none;
+     padding: 0;
+     text-align: left;
+ }
 
-.swal-list li {
-    background: #f4f7f9;
-    padding: 12px 15px;
-    border-left: 4px solid #003366;
-    font-size: 0.85rem;
-    color: #333;
-    display: flex;
-    align-items: center;
-    transition: background 0.3s ease;
-}
+ .swal-list li {
+     background: #f4f7f9;
+     padding: 12px 15px;
+     border-left: 4px solid #003366;
+     font-size: 0.85rem;
+     color: #333;
+     display: flex;
+     align-items: center;
+     transition: background 0.3s ease;
+ }
 
-.swal-list li:hover {
-    background: #e9eff3;
-}
+ .swal-list li:hover {
+     background: #e9eff3;
+ }
 
-/* Botón Plano */
-.swal-btn-institucional {
-    border-radius: 0 !important;
-    padding: 12px 35px !important;
-    font-weight: 600 !important;
-}
+ /* Botón Plano */
+ .swal-btn-institucional {
+     border-radius: 0 !important;
+     padding: 12px 35px !important;
+     font-weight: 600 !important;
+ }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .swal-list {
-        grid-template-columns: 1fr; /* Una columna en celulares */
-    }
-    .swal-institucional-title {
-        font-size: 1.4rem !important;
-    }
-}
+ /* Responsive */
+ @media (max-width: 768px) {
+     .swal-list {
+         grid-template-columns: 1fr;
+         /* Una columna en celulares */
+     }
 
-.clickable-item {
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    border: 1px solid var(--edomex-grey-light);
-    background: #fff;
-}
+     .swal-institucional-title {
+         font-size: 1.4rem !important;
+     }
+ }
 
-/* Efecto al pasar el mouse */
-.clickable-item:hover {
-    border-color: var(--edomex-blue-light);
-    background-color: #f0f7ff; /* Un azul muy sutil */
-    transform: translateY(-3px);
-}
+ .clickable-item {
+     cursor: pointer;
+     transition: all 0.3s ease;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     padding: 20px;
+     border: 1px solid var(--edomex-grey-light);
+     background: #fff;
+ }
 
-.item-label {
-    margin-top: 15px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--edomex-blue-dark);
-    text-align: center;
-    pointer-events: none; /* Evita que el texto interfiera con el clic */
-}
+ /* Efecto al pasar el mouse */
+ .clickable-item:hover {
+     border-color: var(--edomex-blue-light);
+     background-color: #f0f7ff;
+     /* Un azul muy sutil */
+     transform: translateY(-3px);
+ }
+
+ .item-label {
+     margin-top: 15px;
+     font-size: 0.85rem;
+     font-weight: 600;
+     color: var(--edomex-blue-dark);
+     text-align: center;
+     pointer-events: none;
+     /* Evita que el texto interfiera con el clic */
+ }
 
  /* =========================================
            SECCIÓN 3: CRONOLOGÍA (HISTORIA)
@@ -405,97 +428,101 @@
      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
      gap: 2rem;
      margin-top: 3rem;
-     perspective: 1000px; /* Necesario para el efecto 3D */
+     perspective: 1000px;
+     /* Necesario para el efecto 3D */
  }
 
  .card-container {
-   background: transparent;
-    min-height: 200px; /* Un mínimo para que no se vea vacío */
-    perspective: 1000px;
-}
+     background: transparent;
+     min-height: 200px;
+     /* Un mínimo para que no se vea vacío */
+     perspective: 1000px;
+ }
 
-.card-inner {
-   position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-    transform-style: preserve-3d;
-    
-    /* TRUCO SENIOR: Grid para que el padre mida lo que mida la cara más alta */
-    display: grid;
-    grid-template-columns: 1fr;
-}
+ .card-inner {
+     position: relative;
+     width: 100%;
+     height: 100%;
+     transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+     transform-style: preserve-3d;
 
-/* Esta clase se activará con JS */
-.card-inner.is-flipped {
-    transform: rotateY(180deg);
-}
+     /* TRUCO SENIOR: Grid para que el padre mida lo que mida la cara más alta */
+     display: grid;
+     grid-template-columns: 1fr;
+ }
 
-.card-front, .card-back {
-    grid-area: 1 / 1 / 2 / 2;
-    
-    backface-visibility: hidden;
-    border: 1px solid var(--edomex-grey-light);
-    padding: 2rem;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    background-color: var(--white);
-    
-    /* Importante: evitar que el contenido se desborde */
-    height: fit-content;
-    min-height: 100%;   
-    gap: 1.5em;
-}
+ /* Esta clase se activará con JS */
+ .card-inner.is-flipped {
+     transform: rotateY(180deg);
+ }
 
-.card-back {
-    transform: rotateY(180deg); /* La cara trasera inicia invertida */
-    background-color: #f8f9fa;
-    border-color: var(--edomex-blue-light);
-}
+ .card-front,
+ .card-back {
+     grid-area: 1 / 1 / 2 / 2;
 
-.card-back ul {
-    list-style: none;
-    padding: 0;
-    font-size: 0.9rem;
-    text-align: left;
-}
+     backface-visibility: hidden;
+     border: 1px solid var(--edomex-grey-light);
+     padding: 2rem;
+     display: flex;
+     justify-content: space-between;
+     flex-direction: column;
+     background-color: var(--white);
 
-.card-back li {
-    margin-bottom: 10px;
-    padding-left: 15px;
-    position: relative;
-}
+     /* Importante: evitar que el contenido se desborde */
+     height: fit-content;
+     min-height: 100%;
+     gap: 1.5em;
+ }
 
-.card-back li::before {
-    content: "•";
-    color: var(--edomex-blue-light);
-    position: absolute;
-    left: 0;
-}
+ .card-back {
+     transform: rotateY(180deg);
+     /* La cara trasera inicia invertida */
+     background-color: #f8f9fa;
+     border-color: var(--edomex-blue-light);
+ }
 
-/* Botón Estilo Institucional */
-.flip-btn {
-    background: transparent;
-    border: 2px solid var(--edomex-blue-light);
-    color: var(--edomex-blue-light);
-    padding: 10px 20px;
-    cursor: pointer;
-    font-family: var(--font-main);
-    font-weight: 600;
-    transition: all 0.3s ease;
-    align-self: flex-start;
-}
+ .card-back ul {
+     list-style: none;
+     padding: 0;
+     font-size: 0.9rem;
+     text-align: left;
+ }
 
-.flip-btn:hover {
-    background: var(--edomex-blue-light);
-    color: var(--white);
-}
+ .card-back li {
+     margin-bottom: 10px;
+     padding-left: 15px;
+     position: relative;
+ }
 
-.back-btn {
-    border-color: var(--edomex-grey-dark);
-    color: var(--edomex-grey-dark);
-}
+ .card-back li::before {
+     content: "•";
+     color: var(--edomex-blue-light);
+     position: absolute;
+     left: 0;
+ }
+
+ /* Botón Estilo Institucional */
+ .flip-btn {
+     background: transparent;
+     border: 2px solid var(--edomex-blue-light);
+     color: var(--edomex-blue-light);
+     padding: 10px 20px;
+     cursor: pointer;
+     font-family: var(--font-main);
+     font-weight: 600;
+     transition: all 0.3s ease;
+     align-self: flex-start;
+ }
+
+ .flip-btn:hover {
+     background: var(--edomex-blue-light);
+     color: var(--white);
+ }
+
+ .back-btn {
+     border-color: var(--edomex-grey-dark);
+     color: var(--edomex-grey-dark);
+ }
 
  .card {
      background: var(--white);
@@ -587,51 +614,54 @@
      /* PARA IMG-UE */
 
      .grid-container {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        width: 100%;
-    }
+         display: flex;
+         flex-direction: column;
+         gap: 30px;
+         width: 100%;
+     }
 
-    .grid-item {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        height: 100px;
-        gap: 15px;
-        padding: 10px;
-        border-bottom: 1px solid #eee; /* Separador opcional */
-    }
+     .grid-item {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         width: 100%;
+         height: 100px;
+         gap: 15px;
+         padding: 10px;
+         border-bottom: 1px solid #eee;
+         /* Separador opcional */
+     }
 
-    .item-text {
-        display: block; /* Mostramos el texto en móvil */
-        flex: 1;
-        font-weight: 600;
-        color: var(--edomex-blue-dark);
-        font-size: 0.9rem;
-    }
+     .item-text {
+         display: block;
+         /* Mostramos el texto en móvil */
+         flex: 1;
+         font-weight: 600;
+         color: var(--edomex-blue-dark);
+         font-size: 0.9rem;
+     }
 
-    .font-size13{
-        font-size: 13px;
-    }
+     .font-size13 {
+         font-size: 13px;
+     }
 
-    .grid-item img {
-        width: 60px; /* Tamaño controlado para móvil */
-        height: auto;
-    }
+     .grid-item img {
+         width: 60px;
+         /* Tamaño controlado para móvil */
+         height: auto;
+     }
 
-    /* --- LÓGICA DE ALTERNANCIA --- */
+     /* --- LÓGICA DE ALTERNANCIA --- */
 
-    /* Impares (1, 3, 5...): Texto a la DERECHA de la imagen */
-    .grid-item:nth-child(odd) {
-        flex-direction: row; 
-        text-align: center;
-    }
+     /* Impares (1, 3, 5...): Texto a la DERECHA de la imagen */
+     .grid-item:nth-child(odd) {
+         flex-direction: row;
+         text-align: center;
+     }
 
-    /* Pares (2, 4, 6...): Texto a la IZQUIERDA de la imagen */
-    .grid-item:nth-child(even) {
-        flex-direction: row-reverse; 
-        text-align: center;
-    }
+     /* Pares (2, 4, 6...): Texto a la IZQUIERDA de la imagen */
+     .grid-item:nth-child(even) {
+         flex-direction: row-reverse;
+         text-align: center;
+     }
  }
