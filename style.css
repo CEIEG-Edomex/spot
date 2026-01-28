@@ -87,9 +87,10 @@
      margin-bottom: 20px;
      margin-inline: -15px;
      padding: 1em;
+     box-shadow: inset 0px 0px 20px 1px #6666668f;
  }
  /* --- DISEÑO RESPONSIVE (Móvil / Listado Vertical) --- */
-@media (max-width: 500px) {
+@media (max-width: 700px) {
     .footer-logos {
         /* Forzamos una sola columna para que parezca listado */
         grid-template-columns: 1fr; 
