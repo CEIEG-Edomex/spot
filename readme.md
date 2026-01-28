@@ -24,7 +24,7 @@ Al ser un proyecto basado en tecnologías web estándar, no requiere de un entor
 
 1.  Clona el repositorio:
     ```bash
-    git clone [https://github.com/tu-usuario/ceieg-edomex.git](https://github.com/tu-usuario/ceieg-edomex.git)
+    git clone [https://github.com/CEIEG-Edomex/spot.git](https://github.com/CEIEG-Edomex/spot.git)
     ```
 2.  Abre el archivo `index.html` en cualquier navegador moderno.
 
